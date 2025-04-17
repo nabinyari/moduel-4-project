@@ -65,7 +65,7 @@ I am getAmbientMode which helps to give me the light intensity and I am using th
             }
 
 ## Light Sensor part (Tuo Yan)
-Light Sensor Part (Your Name)
+
 In this Light Sensor component of the project, I am enabling the robot to detect and respond to ambient light levels using a light sensor. This functionality allows the robot to adapt its behavior dynamically based on environmental lighting conditions, such as navigating through dark or bright areas. The sensor measures reflected or ambient light intensity, which is processed in real time to control the robot’s movement. Similar to the line-following logic, I am using Java to program the robot’s behavior and compiling it into an executable JAR file.
 
 #### Source code 
