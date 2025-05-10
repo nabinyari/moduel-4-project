@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Latest Robot Feedback</title>
+</head>
+<body>
+  <h2>Latest Robot Motor Speeds</h2>
+  <div id="result"></div>
+
+  <script>
+    fetch("http://localhost:8080/jager/api/robot/stats/latest")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("result").innerHTML =
+          `<p>Left Motor: ${data.leftMotorSpeed}</p>
+           <p>Right Motor: ${data.rightMotorSpeed}</p>`;
+      })
+      .catch(err => {
+        document.getElementById("result").textContent = "Failed to fetch data.";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
