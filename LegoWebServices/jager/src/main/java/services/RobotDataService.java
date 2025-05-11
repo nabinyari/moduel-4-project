@@ -8,13 +8,20 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import java.util.List;
 
 @Path("/robot")
 public class RobotDataService {
 
     @PersistenceContext(unitName = "LegoPU")
     EntityManager em;
+
+    @GET
+    @Path("/info")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String info()
+    {
+        return "this is working";
+    }
 
     @POST
     @Path("/settings")
@@ -30,7 +37,7 @@ public class RobotDataService {
     }
 
     @GET
-    @Path("/settings/latest")
+    @Path("/latest")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getLatestSettings() {
         try {
